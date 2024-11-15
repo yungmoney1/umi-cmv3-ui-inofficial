@@ -349,6 +349,10 @@ export const buildTx = (
   units: number,
   buyBeer: boolean
 ) => {
+  // Log the mint price
+
+  // console.log("Mint Price (in SOL):", mintPrice ? mintPrice.toString() : "Price not set");
+
   let tx = transactionBuilder().add(
     mintV2(umi, {
       candyMachine: candyMachine.publicKey,
@@ -361,6 +365,7 @@ export const buildTx = (
       tokenStandard: candyMachine.tokenStandard,
     })
   );
+
   if (buyBeer) {
     tx = tx.prepend(
       transferSol(umi, {
@@ -371,10 +376,15 @@ export const buildTx = (
       })
     );
   }
+
   tx = tx.prepend(setComputeUnitLimit(umi, { units }));
   tx = tx.prepend(setComputeUnitPrice(umi, { microLamports: parseInt(process.env.NEXT_PUBLIC_MICROLAMPORTS ?? "1001") }));
   tx = tx.setAddressLookupTables(luts);
   tx = tx.setBlockhash(latestBlockhash);
+  
+  // Log the final transaction details
+  console.log("Transaction built with the following details:", tx);
+
   return tx.build(umi);
 };
 

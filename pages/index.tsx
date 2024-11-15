@@ -231,10 +231,11 @@ export default function Home() {
               <Box
                 rounded={'lg'}
                 mt={-12}
+                pt={4}
                 pos={'relative'}>
                 <Image
                   rounded={'lg'}
-                  height={230}
+                  height={350}
                   objectFit={'cover'}
                   alt={"project Image"}
                   src={image}
@@ -269,7 +270,7 @@ export default function Home() {
         {umi.identity.publicKey === candyMachine?.authority ? (
           <>
             <Center>
-              <Button backgroundColor={"red.200"} marginTop={"10"} onClick={onInitializerOpen}>Initialize Everything!</Button>
+              {/* <Button backgroundColor={"red.200"} marginTop={"10"} onClick={onInitializerOpen}>Initialize Everything!</Button> */}
             </Center>
             <Modal isOpen={isInitializerOpen} onClose={onInitializerClose}>
               <ModalOverlay />

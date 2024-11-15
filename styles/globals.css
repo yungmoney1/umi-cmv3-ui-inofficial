@@ -5,24 +5,24 @@
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
 
-    --accent-rgb: 52, 211, 153;
-    --darker-accent-rgb: 0, 204, 150;
-    --on-accent-rgb: 0, 0, 0;
+    --accent-rgb: 138, 43, 226;
+    --darker-accent-rgb: 75, 0, 130;
+    --on-accent-rgb: 255, 255, 255;
 
-    --foreground-rgb: 16, 24, 39;
-    --secondary-foreground-rgb: 107, 114, 128;
+    --foreground-rgb: 255, 255, 255;
+    --secondary-foreground-rgb: 200, 200, 200;
 
-    --background-rgb: 243, 244, 246;
-    --secondary-background-rgb: 249, 250, 251;
-    --tertiary-background-rgb: 209, 213, 219;
-    --hover-background-rgb: 243, 244, 246;
+    --background-rgb: 18, 18, 18;
+    --secondary-background-rgb: 30, 30, 30;
+    --tertiary-background-rgb: 50, 50, 50;
+    --hover-background-rgb: 75, 0, 130;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --accent-rgb: 3, 255, 189;
-    --darker-accent-rgb: 0, 204, 150;
-    --on-accent-rgb: 0, 0, 0;
+    --accent-rgb: 138, 43, 226;
+    --darker-accent-rgb: 75, 0, 130;
+    --on-accent-rgb: 255, 255, 255;
 
     --foreground-rgb: 255, 255, 255;
     --secondary-foreground-rgb: 143, 143, 143;
@@ -30,7 +30,7 @@
     --background-rgb: 18, 18, 18;
     --secondary-background-rgb: 27, 27, 27;
     --tertiary-background-rgb: 42, 42, 42;
-    --hover-background-rgb: 42, 42, 42;
+    --hover-background-rgb: 75, 0, 130;
   }
 }
 
@@ -48,7 +48,7 @@ body {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-rgb));
+  background: linear-gradient(135deg, rgba(18, 18, 18, 1), rgba(30, 30, 30, 1));
 }
 
 a {
@@ -65,11 +65,13 @@ a {
 button.wallet-adapter-button-trigger {
   cursor: pointer;
   color: rgb(var(--foreground-rgb)) !important;
-  border: 1px solid rgb(var(--tertiary-background-rgb)) !important;
+  border: 1px solid rgba(138, 43, 226, 0.5) !important;
   border-radius: var(--border-radius) !important;
-  background-color: rgb(var(--secondary-background-rgb)) !important;
+  background-color: rgba(75, 0, 130, 0.8) !important;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 button.wallet-adapter-button-trigger:hover {
-  background-color: rgb(var(--hover-background-rgb)) !important;
+  background-color: rgba(138, 43, 226, 1) !important;
+  transform: scale(1.05);
 }
