@@ -33,9 +33,9 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta property="og:title" content={headerText} />
         <meta
           property="og:description"
-          content="Website is based on Mark Sackerbergs work"
+          content="ACCESS TO THE CRAZYSKIDAO"
         />
-        <meta name="description" content="Website is based on Mark Sackerbergs work" />
+        <meta name="description" content="ACCESS TO THE CRAZYSKIDAO" />
 
         <meta
           property="og:image"

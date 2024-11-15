@@ -230,8 +230,8 @@ export default function Home() {
             <Center>
               <Box
                 rounded={'lg'}
-                mt={-12}
                 pt={4}
+                mt={-12}
                 pos={'relative'}>
                 <Image
                   rounded={'lg'}
